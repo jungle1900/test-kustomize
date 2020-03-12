@@ -1,0 +1,22 @@
+resources:
+  - ingress.yaml
+
+patchesJson6902:
+  - path: rule/echo.com.yaml
+    target:
+      group: networking.k8s.io
+      version: v1beta1
+      kind: Ingress
+      name: echo-ingress
+  - path: rule/echo.tw.yaml
+    target:
+      group: networking.k8s.io
+      version: v1beta1
+      kind: Ingress
+      name: echo-ingress
+  - path: rule/echo.xyz.yaml
+    target:
+      group: networking.k8s.io
+      version: v1beta1
+      kind: Ingress
+      name: echo-ingress

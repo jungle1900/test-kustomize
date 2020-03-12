@@ -1,0 +1,14 @@
+- op: add
+  path: /spec/rules/-
+  value:
+    host: www.echo.xyz
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: echo-service
+            servicePort: 80
+
+# - op: replace
+#   path: /spec/rules/0/host
+#   value: www.echo.io
